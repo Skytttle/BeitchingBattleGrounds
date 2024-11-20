@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/MultiplayerBattleWizards/Scenes/Menu.unity
+- path: Assets/Feel/FeelDemos/Templates/FeelTemplatesGun.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

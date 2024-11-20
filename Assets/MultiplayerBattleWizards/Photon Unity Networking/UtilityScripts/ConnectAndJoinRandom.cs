@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 /// <summary>
 /// This script automatically connects to Photon (using the settings file),
@@ -9,12 +10,16 @@ using System.Collections;
 public class ConnectAndJoinRandom : Photon.MonoBehaviour
 {
     /// <summary>Connect automatically? If false you can set this to true later on or call ConnectUsingSettings in your own scripts.</summary>
-    public bool AutoConnect = true;
+    public bool AutoConnect = false;
 
     public byte Version = 1;
 
     /// <summary>if we don't want to connect in Start(), we have to "remember" if we called ConnectUsingSettings()</summary>
     private bool ConnectInUpdate = true;
+    [Header("Data")]
+    public int roomCodeLength = 5;      // Length of the generated room codes.
+    public int maxPlayers = 4;          // Maximum number of players allowed in a game.
+    private int playersInGame;          // Number of players in the Game scene.
 
 
     public virtual void Start()
@@ -53,7 +58,12 @@ public class ConnectAndJoinRandom : Photon.MonoBehaviour
     public virtual void OnPhotonRandomJoinFailed()
     {
         Debug.Log("OnPhotonRandomJoinFailed() was called by PUN. No random room available, so we create one. Calling: PhotonNetwork.CreateRoom(null, new RoomOptions() {maxPlayers = 4}, null);");
-        PhotonNetwork.CreateRoom(null, new RoomOptions() { MaxPlayers = 4 }, null);
+
+        RoomOptions roomOptions = new RoomOptions();
+        roomOptions.MaxPlayers = (byte)maxPlayers;
+
+                // Attempt to create the room.
+        PhotonNetwork.CreateRoom(GetRoomCode(), roomOptions, null);
     }
 
     // the following methods are implemented to give you some context. re-implement them as needed.
@@ -67,4 +77,17 @@ public class ConnectAndJoinRandom : Photon.MonoBehaviour
     {
         Debug.Log("OnJoinedRoom() called by PUN. Now this client is in a room. From here on, your game would be running. For reference, all callbacks are listed in enum: PhotonNetworkingMessage");
     }
+    string GetRoomCode ()
+        {
+            string roomCode = "";
+            string usableChars = "123456789ABCDEFGHJKLMNPQRSTUVWXYZ";
+
+            // Get a random character for the length of the code.
+            for(int x = 0; x < roomCodeLength; ++x)
+            {
+                roomCode += usableChars[UnityEngine.Random.Range(0, usableChars.Length)];
+            }
+
+            return roomCode;
+        }
 }

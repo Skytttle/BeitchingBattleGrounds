@@ -22,7 +22,7 @@ MonoBehaviour:
   projectileSpeed: 8
   projectileDrop: 0
   projectileVelocityAffectorType: 1
-  projectileVelocityAffectorIntensity: 10
+  projectileVelocityAffectorIntensity: 5
   onSelfCast:
     doHealCaster: 0
     healthToCaster: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
     objectToSpawnDestroyTime: 0
   onHitTarget:
     doDamage: 1
-    damage: 1
+    damage: 2
     doStun: 0
     stunDuration: 0
     doSpawnObject: 1

@@ -40,7 +40,7 @@ MonoBehaviour:
   onHitTarget:
     doDamage: 1
     damage: 1
-    doStun: 0
+    doStun: 1
     stunDuration: 1
     doSpawnObject: 1
     objectToSpawn: {fileID: 1085639468890820, guid: 489c1c09896fb4749aba32935e9d8dc7,

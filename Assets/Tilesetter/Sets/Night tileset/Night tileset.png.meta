@@ -144,7 +144,7 @@ TextureImporter:
       213: 21300092
     second: Night tileset_46
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -161,10 +161,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -174,8 +176,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -196,11 +198,15 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -212,6 +218,33 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
@@ -1214,9 +1247,56 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Night tileset_0: 21300000
+      Night tileset_1: 21300002
+      Night tileset_10: 21300020
+      Night tileset_11: 21300022
+      Night tileset_12: 21300024
+      Night tileset_13: 21300026
+      Night tileset_14: 21300028
+      Night tileset_15: 21300030
+      Night tileset_16: 21300032
+      Night tileset_17: 21300034
+      Night tileset_18: 21300036
+      Night tileset_19: 21300038
+      Night tileset_2: 21300004
+      Night tileset_20: 21300040
+      Night tileset_21: 21300042
+      Night tileset_22: 21300044
+      Night tileset_23: 21300046
+      Night tileset_24: 21300048
+      Night tileset_25: 21300050
+      Night tileset_26: 21300052
+      Night tileset_27: 21300054
+      Night tileset_28: 21300056
+      Night tileset_29: 21300058
+      Night tileset_3: 21300006
+      Night tileset_30: 21300060
+      Night tileset_31: 21300062
+      Night tileset_32: 21300064
+      Night tileset_33: 21300066
+      Night tileset_34: 21300068
+      Night tileset_35: 21300070
+      Night tileset_36: 21300072
+      Night tileset_37: 21300074
+      Night tileset_38: 21300076
+      Night tileset_39: 21300078
+      Night tileset_4: 21300008
+      Night tileset_40: 21300080
+      Night tileset_41: 21300082
+      Night tileset_42: 21300084
+      Night tileset_43: 21300086
+      Night tileset_44: 21300088
+      Night tileset_45: 21300090
+      Night tileset_46: 21300092
+      Night tileset_5: 21300010
+      Night tileset_6: 21300012
+      Night tileset_7: 21300014
+      Night tileset_8: 21300016
+      Night tileset_9: 21300018
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
